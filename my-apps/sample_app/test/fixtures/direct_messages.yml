@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+first:
+  message: "MyText"
+  from_id: 1
+  to_id: 2
+
+second:
+  message: "MyText"
+  from_id: 1
+  to_id: 3
+
+third:
+  message: "OtherText"
+  from_id: 2
+  to_id: 1
+
+fourth:
+  message: "OtherText"
+  from_id: 3
+  to_id: 1

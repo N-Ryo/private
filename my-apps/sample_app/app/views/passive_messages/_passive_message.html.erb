@@ -1,0 +1,10 @@
+<li id="message-<%= passive_message.id %> passive_message">
+  <%= link_to gravatar_for(passive_message.to, size: 50), passive_message.to %>
+  <span class="message">
+    <%= passive_message.message %>
+    <%= image_tag passive_message.picture.url if passive_message.picture? %>
+  </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(passive_message.created_at) %> ago.
+  </span>
+</li>

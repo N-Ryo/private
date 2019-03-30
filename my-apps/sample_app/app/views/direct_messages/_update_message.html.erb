@@ -1,0 +1,18 @@
+<div id="user_messages">
+  <ol class="direct_messages">
+    <li id="message-<%= @direct_message.id %>">
+      <span class="message" id="active_message">
+        <%= @direct_message.message %>
+        <%= image_tag @direct_message.picture.url if @direct_message.picture? %>
+      </span>
+      <span class="timestamp" id="active_message">
+        <%= @direct_message.created_at.strftime("%Y/%m/%d %H:%M:%S") %>
+        <% if current_user?(@direct_message.from) %>
+          | <%= link_to "delete", direct_message_path(@direct_message.id), method: :delete,
+                                           data: { confirm: "You sure?" }, remote: true %>
+          | <%= link_to "edit",  edit_direct_message_path(@direct_message.id), remote: true %>
+        <% end %>
+      </span>
+    </li>
+  </ol>
+</div>

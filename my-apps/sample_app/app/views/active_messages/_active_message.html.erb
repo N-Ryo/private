@@ -1,0 +1,13 @@
+<li id="message-<%= active_message.id %>  active_message">
+  <span class="message">
+    <%= active_message.message %>
+    <%= image_tag active_message.picture.url if active_message.picture? %>
+  </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(active_message.created_at) %> ago.
+    <% if current_user?(active_message.from) %>
+      <%#= link_to "delete", active_message, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>%>
+</li>

@@ -1,0 +1,9 @@
+<% unless current_user?(@user) %>
+  <div id="direct_message">
+  <% if current_user.following?(@user) %>
+    <%= render 'sendable_direct_message' %>
+  <% else %>
+    <%= render 'unsendable_direct_message' %>
+  <% end %>
+  </div>
+<% end %>

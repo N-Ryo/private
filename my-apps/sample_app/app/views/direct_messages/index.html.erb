@@ -1,0 +1,13 @@
+<% provide(:title, "Direct Message to #{@other_user.name}" ) %>
+<% provide(:url, direct_messages_path) %>
+<div class="top_message">
+  <div class="other_user">
+    <%= @other_user.name %>
+  </div>
+  <div id="send_or_edit">
+    <%= render 'message_form' %>
+  </div>
+</div>
+<div class="row">
+  <%= render @direct_messages %>
+</div>

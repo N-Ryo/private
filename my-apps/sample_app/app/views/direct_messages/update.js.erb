@@ -1,0 +1,2 @@
+$('#send_or_edit').html("<%= escape_javascript(render 'message_form') %>");
+$("#message-<%= @direct_message.id %>").parent().parent().html("<%= escape_javascript(render('update_message')) %>");
